@@ -1,29 +1,19 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOMContentLoaded")
-    initApp();
-})
+  console.log("DOMContentLoaded");
+});
 
-const readingWindow = document.getElementById('reading-window')
-const fontSize = document.getElementById('fontSize');
-console.log(fontSize)
-
-const initApp = () => {
-    console.log('initApp')
-    updateFontSize()
-}
+const readingWindow = document.getElementById("reading-window");
+const fontSize = document.getElementById("font-size");
 
 const updateFontSize = () => {
+  const newFontSize = fontSize.value;
 
-    const enteredSize = fontSize.value;
-    console.log(enteredSize)
-    /// TO DO: FINISH THIS FUNCTION
-    /*
-    const isValidSize = /^\d+$/.test(enteredSize);
+  let isValidSize = false;
+  if (newFontSize >= 8 && newFontSize <= 60) {
+    isValidSize = true;
+  }
 
-    if(isValidSize) {
-        output.style.fontSize = enteredSize + 'px';
-    }
-    */
-}
-
-
+  if (isValidSize) {
+    readingWindow.style.fontSize = newFontSize + "px";
+  }
+};

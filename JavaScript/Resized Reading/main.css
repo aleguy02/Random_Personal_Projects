@@ -44,4 +44,9 @@
   position: absolute;
   right: 0px;
   top: 20%;
+  gap: 10px;
+}
+
+#font-size {
+  width: 40px;
 }

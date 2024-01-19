@@ -11,34 +11,50 @@
       <div id="interface">
         <div id="dropdown-menus-container">
           <!--Font Drop Down-->
-          <label for="Font">Font:</label>
-          <select id="different-fonts" for="Different Fonts">
-            <option value="Arial">Arial</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Comic Sans">Comic-Sans</option>
-            <option value="Cum">Cum</option>
-          </select>
-          <!--Font Type Drop Down-->
-          <label for="Font Type">Font Type:</label>
-          <select id="font-type" for="Font Type">
-            <option value="Regular">Regular</option>
-            <option value="Bold">Bold</option>
-            <option value="Italics">Italics</option>  <!--I think we should remove italics and underlined options, they make it harder to read-->
-            <option value="Underlined">Underlined</option>
-          </select>
-
-          <div class="font-size-selector">
-            <input
-              oninput="updateFontSize()"
-              list="fontSizes"
-              id="fontSize"
-              name="fontSize"
-            />
-            <datalist id="fontSizes">
-              <option value="12"></option>
-              <option value="16"></option>
-              <option value="20"></option>
-            </datalist>
+          <div>
+            <label for="Font">Font:</label>
+            <select id="different-fonts" for="Different Fonts">
+              <option value="Arial">Arial</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Comic Sans">Comic-Sans</option>
+              <option value="Cum">Cum</option>
+            </select>
+          </div>
+          <!--Font Bold Drop Down-->
+          <div>
+            <label for="Font Type">Font Type:</label>
+            <select id="font-type" for="Font Type">
+              <option value="Regular">Regular</option>
+              <option value="Bold">Bold</option>
+              <option value="Italics">Italics</option>
+              <!--I think we should remove italics and underlined options, they make it harder to read-->
+              <option value="Underlined">Underlined</option>
+            </select>
+          </div>
+          <!--Font Size Drop Down-->
+          <div>
+            <label for="Font Size">Font Size:</label>
+            <!-- <div class="font-size-selector"> -->
+              <input
+                oninput="updateFontSize()"
+                list="fontSizes"
+                id="font-size"
+                name="fontSize"
+              />
+              <!-- What is 'name="fontSize"' for? Wouldn't id="fontsize" do the same thing for our purposes? -->
+              <datalist id="fontSizes">
+                <option value="8"></option>
+                <option value="10"></option>
+                <option value="12"></option>
+                <option value="16"></option>
+                <option value="20"></option>
+                <option value="24"></option>
+                <option value="30"></option>
+                <option value="36"></option>
+                <option value="48"></option>
+                <option value="60"></option>
+              </datalist>
+            <!-- </div> -->
           </div>
         </div>
 
