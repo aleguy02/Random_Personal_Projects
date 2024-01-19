@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js"></script>
+    <title>Customizable Reading Window</title>
+    <link rel="icon" type="image.png" href="icons/hand icon.png" />
+  </head>
+  <body>
+    <div id="screen">
+      <div id="interface">
+        <div id="dropdown-menus-container">
+          <!--Font Drop Down-->
+          <label for="Font">Font:</label>
+          <select id="different-fonts" for="Different Fonts">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Comic Sans">Comic-Sans</option>
+            <option value="Cum">Cum</option>
+          </select>
+          <!--Font Type Drop Down-->
+          <label for="Font Type">Font Type:</label>
+          <select id="font-type" for="Font Type">
+            <option value="Regular">Regular</option>
+            <option value="Bold">Bold</option>
+            <option value="Italics">Italics</option>  <!--I think we should remove italics and underlined options, they make it harder to read-->
+            <option value="Underlined">Underlined</option>
+          </select>
+
+          <div class="font-size-selector">
+            <input
+              oninput="updateFontSize()"
+              list="fontSizes"
+              id="fontSize"
+              name="fontSize"
+            />
+            <datalist id="fontSizes">
+              <option value="12"></option>
+              <option value="16"></option>
+              <option value="20"></option>
+            </datalist>
+          </div>
+        </div>
+
+        <div id="drag-hand-container">
+          <img src="icons/hand icon.png" id="drag-hand" />
+        </div>
+        <textarea
+          id="reading-window"
+          type="text"
+          placeholder="Input Your Text Here"
+        ></textarea>
+      </div>
+    </div>
+  </body>
+</html>
